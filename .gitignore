@@ -7,16 +7,25 @@ package-lock.json
 node_modules/
 .sass-cache/
 
-### OSX ###
+# mac
 .DS_Store
 .AppleDouble
 .LSOverride
-
-### Linux ###
-*~
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
 
 ### Other ###
 .test/
 .solution
-
-.babelrc
