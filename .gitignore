@@ -6,6 +6,7 @@ npm-debug.log*
 package-lock.json
 node_modules/
 .sass-cache/
+.env
 
 # mac
 .DS_Store
@@ -29,3 +30,5 @@ Temporary Items
 ### Other ###
 .test/
 .solution
+*.ai
+.gitignore
