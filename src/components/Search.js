@@ -11,7 +11,7 @@ const Search = ({submitHandler}) => {
   return (
     <form className='search-module'>
       <input onChange={handleChange} type='text' name='text' value={input} />
-      <button type='button' onClick={() => submitHandler(input)} value='Search' name='button'>Search</button>
+      <button type='button' onClick={() => submitHandler(input)} name='button'>Search</button>
   </form>
   );
 }

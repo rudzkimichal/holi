@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div className='top-header'>
       <div className='logo-container'>
-        <img src={logo} alt='logo' />
+        <img src={logo} alt='Logo' />
       </div>
     </div>
   );
@@ -36,6 +36,7 @@ const App = () => {
   return (
     <div className='app-container'>
       <Header />
+      <img src={logo} alt='logo' />
       <div className='title'>Ho<span>me<br /></span>Li<span>brary</span></div>
       <Search submitHandler={handleSubmit} />
       <List searchResult={searchResult}/>
