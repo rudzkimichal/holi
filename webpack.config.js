@@ -3,7 +3,7 @@ const path = require('path');
 
 
 module.exports = {
-  entry: ['whatwg-fetch','./src/components/App.js'],
+  entry: './src/components/App.js',
   output: {
     filename: 'bundle.js',
     publicPath: '/dist/',
@@ -26,9 +26,9 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
-          'style-loader', 'css-loader'
+          'style-loader', 'css-loader', 'sass-loader'
         ],
       },
       {

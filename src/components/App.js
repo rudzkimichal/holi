@@ -3,7 +3,7 @@ import React,{useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import List from './List';
 import Search from './Search';
-import '../css/style.css';
+import '../scss/style.scss';
 import logo from '../logo.png';
 
 
@@ -20,8 +20,8 @@ const Header = () => {
 
 const App = () => {
 
-  const [searchResult, setSearchResult] = useState([]);
-  const [keyword, setKeyword] = useState('');
+  const [searchResult, setSearchResult] = useState(null);
+  const [keyword, setKeyword] = useState(null);
 
   const handleSubmit = (keyword) => {
     fetch('http://localhost:3000/books')
@@ -36,7 +36,6 @@ const App = () => {
   return (
     <div className='app-container'>
       <Header />
-      <img src={logo} alt='logo' />
       <div className='title'>Ho<span>me<br /></span>Li<span>brary</span></div>
       <Search submitHandler={handleSubmit} />
       <List searchResult={searchResult}/>
