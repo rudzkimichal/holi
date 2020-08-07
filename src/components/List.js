@@ -3,7 +3,7 @@ import React,{useEffect,useState} from 'react';
 
 const List = ({searchResult}) => {
 
-  if(!searchResult) return <p>Book doesn't exist</p>;
+  if(!searchResult) return <p>No data</p>
 
   return (
     <>

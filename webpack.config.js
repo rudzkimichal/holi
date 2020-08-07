@@ -3,7 +3,7 @@ const path = require('path');
 
 
 module.exports = {
-  entry: './src/components/App.js',
+  entry: ['whatwg-fetch','./src/components/App.js'],
   output: {
     filename: 'bundle.js',
     publicPath: '/dist/',
@@ -16,8 +16,10 @@ module.exports = {
     port: 8080,
     historyApiFallback: true
   },
-
-
+  node: {
+    fs: 'empty',
+    net: 'empty'
+  },
   module: {
     rules: [
       {

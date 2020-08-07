@@ -1,12 +1,12 @@
 {
   "name": "holi",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A web-based library catalogue manager",
   "main": "webpack.config.js",
+  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "webpack-dev-server --hot -d",
-    "build": "webpack -p",
-    "server": "nodemon ./server/routes.js"
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -31,11 +31,9 @@
     "style-loader": "^1.1.4",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.9.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

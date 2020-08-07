@@ -20,18 +20,19 @@ const Header = () => {
 
 const App = () => {
 
-  const [searchResult, setSearchResult] = useState(null);
-  const [keyword, setKeyword] = useState(null);
+  const [searchResult, setSearchResult] = useState([]);
+  const [keyword, setKeyword] = useState('');
 
-  const handleSubmit = (keyword) => {
-    fetch('http://localhost:3000/books')
+  useEffect((data) => {
+
+    fetch('api/all')
     .then(resp => resp.json())
-    .then(data => data.filter(item => item.author.lastName.includes(keyword)))
-    .then(data => setSearchResult(data))
+    .then(data => console.log(data))
     .catch(err => console.log(err));
-  }
+  });
 
-  if(!searchResult) return 'Loading data....';
+  const handleSubmit = (e) => {
+  }
 
   return (
     <div className='app-container'>
