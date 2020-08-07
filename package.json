@@ -3,7 +3,6 @@
   "version": "2.0.0",
   "description": "A web-based library catalogue manager",
   "main": "webpack.config.js",
-  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "webpack-dev-server --hot -d",
     "build": "webpack -p"

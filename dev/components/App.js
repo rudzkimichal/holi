@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import List from './List';
 import Search from './Search';
 import '../scss/style.scss';
-import logo from '../logo.png';
 
 
 
@@ -12,7 +11,7 @@ const Header = () => {
   return (
     <div className='top-header'>
       <div className='logo-container'>
-        <img src={logo} alt='Logo' />
+        Tutaj powinno być logo
       </div>
     </div>
   );
