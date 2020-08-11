@@ -4,6 +4,8 @@ const path = require('path');
 
 module.exports = {
 
+  mode: 'production',
+
   entry: './dev/components/App.js',
 
   output: {

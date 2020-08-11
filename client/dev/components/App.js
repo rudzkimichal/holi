@@ -22,14 +22,6 @@ const App = () => {
   const [searchResult, setSearchResult] = useState([]);
   const [keyword, setKeyword] = useState('');
 
-  useEffect((data) => {
-
-    fetch('api/all')
-    .then(resp => resp.json())
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
-  });
-
   const handleSubmit = (e) => {
   }
 
