@@ -4,9 +4,9 @@ const path = require('path');
 
 module.exports = {
 
-  mode: 'production',
+  mode: 'development',
 
-  entry: './dev/components/App.js',
+  entry: './index.js',
 
   output: {
     filename: 'bundle.js',
@@ -27,7 +27,10 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
       },
       {
         test: /\.scss$/,

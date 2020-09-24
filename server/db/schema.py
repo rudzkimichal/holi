@@ -1,17 +1,23 @@
 
 from marshmallow import Schema, fields
 
-AuthorSchema = Schema.from_dict({'firstName': fields.Str(), 'lastName': fields.Str()})
-
 class MongoSchema(Schema):
 
-    published_by = fields.Str()
-    author = fields.Nested(AuthorSchema)
+    publishedBy = fields.Str()
+    author = fields.Dict(firstName = fields.Str(), lastName = fields.Str())
     title = fields.Str()
     vol = fields.Str()
     comments = fields.Str()
     location = fields.Str()
     isbn = fields.Str()
-    year_published = fields.Str()
-    image_url = fields.URL()
+    yearPublished = fields.Str()
+    imageUrl = fields.URL()
     desc = fields.Str()
+
+responseSchema = {
+    '_id': 0,
+    'author': 1,
+    'title': 1,
+    'publishedBy': 1,
+    'isbn': 1
+}
