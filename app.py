@@ -1,34 +1,22 @@
-from flask import Flask
+from flask import Flask, jsonify
 import pymongo
 from dotenv import load_dotenv
-import json
 import os
-from marshmallow import Schema, fields
+from bson import json_util
+import json
 
 load_dotenv()
 
 app = Flask(__name__)
 db_uri = os.environ.get('DB_URI')
 client = pymongo.MongoClient(db_uri)
-db = client.books
-coll = db.test
-
-class AuthorSchema(Schema):
-    firstName: fields.Str()
-    lastName: fields.Str()
-
-class DbSchema(Schema):
-    title: fields.Str()
-    author: fields.Nested(AuthorSchema())
 
 @app.route('/', methods = ['GET'])
 def get_all():
-    data = coll.find()
-    data = list(data)
-    schema = DbSchema()
-    data_json = schema.dump(data)
+    data = client.books.test.find()
+    items = jsonify(json.loads(json_util.dumps(data)))
 
-    return data_json
+    return items
 
 if __name__ == '__main__':
     app.debug = True
