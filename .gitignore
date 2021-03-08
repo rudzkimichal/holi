@@ -7,6 +7,7 @@ package-lock.json
 node_modules/
 .sass-cache/
 .env
+dist/
 
 ### mac ###
 .DS_Store
