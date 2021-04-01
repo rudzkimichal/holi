@@ -1,7 +1,9 @@
+
 import React from 'react';
+import Test from './TestEndpoints';
 
 const App = () => {
-  return <p>React test OK</p>
+  return <Test />;
 }
 
 export default App;

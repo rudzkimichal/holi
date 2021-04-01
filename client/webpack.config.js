@@ -28,7 +28,7 @@ module.exports = {
     contentBase: path.join(__dirname, "/"),
     port: 8080,
     publicPath: "http://localhost:8080/",
-    hotOnly: true
-  },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+    hot: true,
+    inline: true
+  }
 };
